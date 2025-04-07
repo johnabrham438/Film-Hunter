@@ -1,0 +1,218 @@
+body{
+    background-color:  #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-container img{
+    width: 25rem;
+}
+.search-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+.search-input{
+    width: 40rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 240, 36, 0.438);
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+.search-input::placeholder{
+    font-size: 1.5rem;
+}
+.search-input:focus{
+    outline: 1px solid  rgba(255, 240, 36, 0.89);
+}
+.search-input:hover{
+    border-color:  rgba(255, 240, 36, 0.89);
+}
+.search-button{
+    margin-left: 1rem;
+    padding: 1rem;
+    width: 10rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    background-color:  rgba(255, 214, 30, 0.938);
+}
+.search-button:hover{
+    background-color:  rgba(255, 220, 63, 0.664);
+}
+.search-button:active{
+  transform: scale(0.95);
+}
+.loading{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5rem;
+    color: rgba(255, 227, 103, 0.938);
+    font-size: 1.1rem;
+}
+
+.lds-roller,
+.lds-roller div,
+.lds-roller div:after {
+  box-sizing: border-box;
+}
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7.2px;
+  height: 7.2px;
+  border-radius: 50%;
+  background: rgba(255, 214, 30, 0.938);
+  margin: -3.6px 0 0 -3.6px;
+}
+
+.lds-facebook,
+.lds-facebook div {
+  box-sizing: border-box;
+}
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: rgba(255, 214, 30, 0.938);
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0s;
+}
+.no-result{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5rem;
+  width: 100%;
+}
+.no-result h1{
+  color: rgba(255, 240, 36, 0.185);
+
+
+
+}
+.movie-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 3rem;
+    padding: 3rem;
+    gap: 5rem;
+
+
+}
+.movie-poster img{
+   width: 12rem;
+   border: 1px solid white;
+   border-radius: 0.5rem;
+   cursor: pointer;
+}
+.movie-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1rem;
+    height: 250px;
+    width: 400px;
+
+}
+.movie-poster img:hover{
+    transform: scale(1.1);
+}
+.movie-detail h2{
+    font-size: 1.2rem;
+    color: rgba(255, 214, 30, 0.938);
+}
+.movie-detail strong{
+    color: white;
+}
+.movie-detail p {
+    font-size: 1.5rem;
+    width: 100%;
+    color: #c2c1bdea;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.movie-detail p:nth-child(6){
+    width: 50rem;
+    
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .search-container{
+    flex-direction: column;
+  }
+    .search-input{
+        width: 25rem;
+        margin-bottom: 1rem;
+    }
+    .movie-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .movie-item{
+        width: 300px;
+    }
+  }
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .movie-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .movie-item{
+        width: 300px;
+    }
+  }

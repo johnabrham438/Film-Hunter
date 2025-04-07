@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmHunter -  watch Movies For Free</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <div class="logo-container">
+            <img src="logo.png" alt="logo">
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search for a movie..." id="searchInput" class="search-input">
+            <button class="search-button" id="searchBtn">search</button>
+        </div>
+        <div id="loading" class="loading">
+         <div class="lds-facebook"><div></div><div></div><div></div></div>
+         Please wait, fetching movie information... 
+        </div>
+        <div class="no-result" id="no-result">
+            <h1>noting found, try search again</h1>
+        </div>
+        
+       <div class="movie-container" id="movie-container"></div> 
+    </main>
+    
+    <script src="main.js"></script>
+</body>
+</html>
